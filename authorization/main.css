@@ -1,0 +1,48 @@
+:root{
+    --main-background_color: rgb(250, 250, 250);
+    --button-background_color:#fd488c;
+    --button-font-color:white;
+    --main-font-size:55px;
+    --button-font-size:15px;
+    --shadow-box-color:#ff8888
+    
+}
+.authorization{
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap:50px;
+align-items:center;
+height: 900px;
+}
+.signin,
+.signup{ 
+    background-color: var(--main-background_color);
+    width:500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:500px;    
+}
+h2{
+    font-family: system-ui, -apple-system, "Monsterrat";
+    font-size: var(--main-font-size);
+}
+input{
+    width:270px;
+    height:35px;
+}
+button
+{
+    background-color: var(--button-background_color);
+    font-family: system-ui, -apple-system, "Monsterrat";
+    font-weight: bold;
+    color:var(--button-font-color);
+    font-size:var(--button-font-size);
+    box-shadow: 0px 0px 5px 2px var(--shadow-box-color);
+    border:0px;
+    width:280px;
+    height:45px;
+}
+
