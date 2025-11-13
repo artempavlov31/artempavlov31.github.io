@@ -3,45 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Баскетболлер</title>
-<style>
-.authorization{
-display: flex;
-flex-direction: row;
-justify-content: center;
-gap:50px;
-align-items:center;
-height: 900px;
-}
-.signup{
-    border: 0,25px solid rgb(212, 210, 210); 
-    background-color: rgb(250, 250, 250);
-    width:500px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height:500px;    
-}
-.signin{
-    border:0,25px solid rgb(212, 210, 210);
-    background-color: rgb(250,250,250);
-    width: 500px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height:500px;
-    align-items: center;
-}
-</style>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
 <div class="authorization">
     <div class="signup">
         <h1>
-            <font size="20">
             Регистрация
-            </font>
         </h1>
         <form method="post" action="">
             <p><input type="email" name="email" placeholder="email" autocomplete="off"/></p>
@@ -51,9 +19,7 @@ height: 900px;
     </div>
     <div class="signin">        
         <h1>
-            <font size="20">
             Вход
-            </font>
         </h1>
         <form method="post" action="">
             <p><input type="email" name="email" placeholder="email" autocomplete="on"/></p>
