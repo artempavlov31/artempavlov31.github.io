@@ -559,8 +559,8 @@ sup {
   [for=burger-menu]{ 
     transform: scale(2);
     position: fixed;
-    top: 15px;
-    right: 15px;
+    top: 1%;
+    right: 25%;
     color: #000;
     display: block;
     z-index: 2;
@@ -600,7 +600,7 @@ sup {
         margin-bottom: 15px;
       }
       a{  
-        margin-right: 10px;
+        margin-right: 25%;
         color: var(--footer-banner-font-color);
         user-select: none;
         text-decoration: none;
