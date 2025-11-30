@@ -16,22 +16,26 @@
   --text-size:12px;
   --bold-text-size:36px;
 }
+
 body{
-  width:1500px;
-  margin: 0 auto;
+  width: 100%;
   overflow-x: hidden;
 }
 #header {
+  
   display: flex;
   align-items: center;
   width: 1600px;
   height: 84px;
   margin-top: -20px;
-  background-color: var(--background_color);
+  background-color:var(--background_color)  ;
   font-family: var(--font);
   color: var(--main-font-color);
   font-size: var(--text-size);
   
+}
+#burger-menu,[for=burger-menu],nav{
+  display: none;
 }
 .logo_1 {
   width: 29px;
@@ -95,6 +99,9 @@ img{
   font-weight: 700;
   position: absolute;
   margin-left: 900px;
+  &.ft{
+    margin-left: 1045px;
+  }
 }
 .book_call {
   margin-left: 30px;
@@ -135,7 +142,6 @@ img{
 #first_screen {
   width: 1600px;
   height: 455px;
-  margin-left: -10px;
   font-family: var(--font);
   color: var(--main-font-color);
 }
@@ -148,6 +154,7 @@ img{
   display: flex;
   flex-direction: column;
   gap:25px;
+  
 }
 .offer_text_b{
   font-weight: 900;
@@ -177,12 +184,11 @@ button:hover{
 .snickers_bg {
   width: 615px;
   height: 369px;
-  position: absolute;
   margin-left: 792px;
   margin-top: -405px;
   display: flex;
   gap: 10px;
-  background-image:linear-gradient(to right,rgba(49,69,255,0.5) 60%),url('bg-image.jpg');
+  background:linear-gradient(to right,rgba(49,69,255,0.5) 60%),url('bg-image.jpg');
   background-size: cover;
   justify-content:flex-end;
   position: absolute;
@@ -200,29 +206,30 @@ button:hover{
 .desc{
   width: 253px;
   height:82px;
-  margin-right:-153px;
+  margin-right:-220px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  &.product{
-    font-weight: 700;
-    font-size: var(--h2-size-mobile);
-  }
-  &.description{
-    font-weight: 400;
-    font-size: var(--text-size);
-  }
-  &.price{
-    font-weight:700;
-    font-size: var(--text-size);
-    color: var(--footer-banner-font-color);
-  } 
 }
-.square{
+.desc-square{
   width:13px;
   height:13px;
   background-color: var(--background_color);
   }
+ .desc-product{
+    font-weight: 700;
+    font-size: var(--h2-size-mobile);
+  }
+  .desc-description{
+    font-weight: 400;
+    font-size: var(--text-size);
+  }
+  .desc-price{
+    font-weight:700;
+    font-size: var(--text-size);
+    color: var(--footer-banner-font-color);
+  } 
+
 .slide_rect {
   align-self: flex-end;
   width: 42px;
@@ -452,7 +459,7 @@ button:hover{
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left:27px ;
+  margin-left:27px;
 }
 .number {
   margin-top: 50px;
@@ -505,4 +512,394 @@ sup {
   height: 45px;
   border: solid 1px var(--footer-banner-font-color);
   left: 12.6px;
+}
+@media (max-width:1024px){
+  #header{
+    width: 1054px;
+  }
+  body{
+    overflow-x:auto;
+    width: 1024px;
+  }
+  .logo_1{
+    margin-left:15px;
+  }
+  .book_call,
+  .items,
+  .triple_dot{
+    &.hd{
+      display: none;
+    }
+  }
+  .phone-number{
+    position: absolute;
+    &.hd{
+    margin-left: 331px;
+    }
+    &.ft{
+      margin-left: 13px;
+      margin-top: 135px;
+    }
+  }
+  .shopping_basket{
+    position: absolute;
+    margin-left: 527px;
+  }
+  [for=burger-menu]{ 
+    transform: scale(2);
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: #000;
+    display: block;
+    z-index: 2;
+  }
+  [for=burger-menu]::before{
+    content: "☰";
+  }
+   #burger-menu:checked+[for=burger-menu]::before{
+    content: "✖";
+    color:white;
+  }
+  #burger-menu:checked+label+nav{
+      display: block;
+      animation: move-to-left 1s;
+    }
+  @keyframes move-to-left{
+    0%{
+      translate: 110vw;
+    }
+  }
+  @keyframes move-to-right{
+    100%{
+      translate: 110vw;
+    }
+  }
+  nav{
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,0.73);
+    z-index:1;
+    top: 0;
+    width: 100%;
+    height: 120%;
+    right: 0;
+    text-align: end;
+    ul{
+    margin-top: 50px;
+    list-style-type: none;
+      li{
+        margin-bottom: 15px;
+      }
+      a{  
+        margin-right: 10px;
+        color: var(--footer-banner-font-color);
+        user-select: none;
+        text-decoration: none;
+        font-size: var(--paragraph-size);
+      }
+    }
+  }
+  
+  
+  #first_screen{
+    height:770px;
+  }
+  .offer{
+    margin-top: 13px;
+    margin-left:13px;
+  }
+  .snickers_bg{
+    position:absolute;
+    margin-left: 13px;
+    margin-top: 52px;
+    margin-bottom: 300px;
+  }
+  .first_scr_image{
+    right: 195px;
+    top:84px;
+  }
+  .desc-square{
+    margin-top: 169px;
+  }
+  .desc{
+    margin-top: 179px;
+  }
+  #hot_goods{
+    margin-left:0;
+    h2{
+      margin-left: 13px;
+      font-size: var(--h2-size-mobile);
+    }
+  }
+  .arrow{
+    display: none;
+  }
+  .items{
+    &.hg{
+      
+      margin-left: 369px;
+      gap: 28px;
+    }
+    &.ft{
+      position: absolute;
+      margin-top: 92px;
+      margin-left: 13px;
+    }
+  }
+  .nav_panel{
+    margin-left:149px ;
+  }
+  .pics_goods{
+    margin-left: 15px;
+  }
+  #banners{
+  margin-left: 15px;
+  }
+  #catalogue{
+    margin-left: 15px;
+  }
+  .pics_catalogue{
+  grid-template-columns: repeat(2, 235px);
+  grid-template-rows: repeat(4, 335px);
+  }
+  #about_us{
+    margin-top: 1000px;
+    margin-left: 11px;
+  }
+  .numbers{
+    height: 200%;
+    display: grid;
+    grid-template-columns: repeat(2,225px);
+    grid-template-rows:repeat(2,55px);
+    overflow: auto;
+  }
+  #footer{
+    position: absolute;
+    align-items: flex-start;
+    width: 1800px;
+    .logo_1{
+      margin-top: 40px;
+    }
+  }
+  .basketballer_foot{
+    margin-top: 40px;
+  }
+  .triple_dot{
+    margin-top: 82px;
+  }
+  .arrow_up{
+    margin-top: 190px;
+    position: absolute;
+    right: 1020px;
+  }
+  .book_call{
+    &.foot{
+      position: absolute;
+      margin-left: 13px;
+       margin-top: 195px;
+    }
+   
+  }
+}
+@media(max-width:456px){
+  body{
+    overflow-x:auto;
+    width: 476px;
+  }
+  #header{
+    width: 486px;
+  }
+  
+  .logo_1{
+    margin-left:15px;
+  }
+  .book_call,
+  .items,
+  .triple_dot{
+    &.hd{
+      display: none;
+    }
+  }
+  .phone-number{
+    position: absolute;
+    &.hd{
+      margin-top: 70px;
+      margin-left: 15px;
+    }
+    &.ft{
+      margin-left: 82px;
+      margin-top: 120px;
+    }
+  }
+  .shopping_basket{
+    margin-top: 70px;
+    margin-left: 185px;
+  }
+  .burger-menu{
+    width: 19px;
+    height: 12px;
+    position:absolute;
+    margin-left: 290px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  .burger-menu-rect{
+    width: 19px;
+    height: 2px;
+    background-color: var(--main-font-color);
+  }
+  #first_screen{
+    height:770px;
+    width: 220px;
+
+  }
+  .offer{
+    width: auto;
+    margin-top: 13px;
+    margin-left:13px;
+  }
+  .offer_text_b{
+      font-size: var(--h2-size-mobile);
+  }
+  .offer_text{
+    font-size:var(--paragraph-size);
+  }
+  .snickers_bg{
+    position:absolute;
+    margin-left: 13px;
+    margin-top: 52px;
+    margin-bottom: 300px;
+    width: 320px;
+    height: 345px;
+  }
+  .first_scr_image{
+    right: 60px;
+    top:84px;
+    width: 75%;
+    height: 75%;
+  }
+  .desc-square{
+    margin-top: 200px;
+    left: 13px;
+    position: absolute;
+  }
+  .desc{
+    margin-top: 210px;
+    position: absolute;
+    left: 35px;
+  }
+  .slide_rect{
+    right: 0;
+  }
+  #hot_goods{
+    margin-left:0;
+    h2{
+      margin-left: 13px;
+      font-size: var(--h2-size-mobile);
+    }
+  }
+  .arrow{
+    display: none;
+  }
+  .items{
+    &.hg{
+      margin-top: 32px;
+      margin-left: 13px;
+      gap: 27px;
+    }
+    &.ft{
+      position: absolute;
+      margin-top: 82px;
+      margin-left: 13px;
+      gap: 24px;
+    }
+  }
+  .nav_panel{
+    margin-left:13px ;
+    width: 311px;
+  }
+  .nav_rect{
+    margin-left: 82px;
+  }
+  .pics_goods{
+    margin-left: 15px;
+  }
+  #banners{
+  margin-left: 15px;
+  }
+  .banner{
+    width: 20%;
+    height: 120%;
+    &.square{
+      margin-left:5px;
+    }
+  }
+  .banner-text-b{
+    h3{
+      margin-left: 15px;
+    }
+  }
+  .banner-text-small{
+    margin-left: 15px;
+  }
+  #catalogue{
+    margin-left: 15px;
+    h2{
+      font-size: var(--h2-size-mobile);
+    }
+  }
+  .pics_catalogue{
+  grid-template-columns: repeat(4, 235px);
+  grid-template-rows: repeat(2, 335px);
+  }
+  #about_us{
+    margin-top: 75px;
+    margin-left: 11px;
+    h2{
+      font-size: var(--h2-size-mobile);
+    }
+  }
+  .numbers{
+    height: 350%;
+    display: grid;
+    grid-template-columns: repeat(1,250px);
+    grid-template-rows:repeat(4,5px);
+    overflow: auto;
+  }
+  #footer{
+    align-items: flex-start;
+    margin-top: 290px;
+    position: absolute;
+    width: 1314px;
+    .logo_1
+    {
+      margin-top: 20px;
+      margin-left: 41px;
+      
+    }
+  }
+  .basketballer_foot{
+      position: absolute;
+      margin-top: 20px;
+      margin-left: 82px;
+    }
+  .triple_dot{
+    margin-top: 82px;
+    margin-left: 194px;
+  }
+  .arrow_up{
+    margin-top: 195px;
+    right: 1055px;
+  }
+  .book_call{
+    &.foot{
+      position: absolute;
+      margin-left: 72px;
+       margin-top:150px;
+    }
+  }
 }

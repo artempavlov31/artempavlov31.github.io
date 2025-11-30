@@ -5,7 +5,7 @@
 Баскетболлер
 </title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.75">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -21,15 +21,15 @@
           <span class="item">Майки</span>
           <span class="item">Шорты</span>
         </div>
-        <div class="triple_dot">
+        <div class="triple_dot hd">
           <b>.</b>
           <b>.</b>
           <b>.</b>
         </div>
-        <div class="phone-number">
+        <div class="phone-number hd">
           <b>8(908)45-32-7798</b>
         </div>
-        <div class="book_call hdr">
+        <div class="book_call hd">
           Заказать звонок
         </div>
         <div class="shopping_basket">
@@ -37,6 +37,20 @@
           <span><b>3 242 руб.</b></span>
           <span class="basket_triangle"></span>
         </div>
+          <input type="checkbox" id="burger-menu">
+          <label for="burger-menu"></label>
+          <nav>
+            <input type="checkbox" id="burger-menu">
+            <label for="burger-menu">
+            </label>
+            <ul>
+              <li><a href="#">Мячи</a></li>
+              <li><a href="#">Кроссовки</a></li>
+              <li><a href="#">Майки</a></li>
+              <li><a href="#">Шорты</a></li>
+              <li><a href="#">...</a></li>
+            </ul>
+          </nav>
     </div>
     <div id="first_screen">
         <div class="offer">
@@ -49,12 +63,12 @@
         </div>
         <div class="snickers_bg">
           <span class="first_scr_image"><img src="snickers.png"/></span>
-          <span class="square"></span>
+          <div class="desc-square"></div>
           <div class="desc">
-            <span class="desc product">Nike Air Jordan 1</span>
-            <span class="desc description">Верх из натуральной красной замши
+            <span class="desc-product">Nike Air Jordan 1</span>
+            <span class="desc-description">Верх из натуральной красной замши
             дополнен накладкой с текстурой.</span>
-            <span class="desc price">5780 руб.</span>
+            <span class="desc-price">5780 руб.</span>
           </div>
             <span class="slide_rect rect_1"></span>
             <span class="slide_rect rect_2"></span>
@@ -121,8 +135,7 @@
     <div id="banners">
         <div class="banner one">
           <span class="plus">+</span>
-          <div class="banner square">
-          </div>
+          <div class="banner square"></div>
           <span class="banner-text-b"><h3>Поступление новых кроссовок</h3></span>
           <span class="banner-text-small">AIR JORDAN снова в моде!</span>
         </div>
@@ -234,7 +247,7 @@
     </div>
     <div id="footer">
       <div class="logo_1"><img src="basketball_foot.svg" alt="Лого" width="40" height="40"/></div>
-      <div>
+      <div class="basketballer_foot">
         <span><b>Баскетболлер</b></span>
         <br>Магазин баскетбольных товаров</br>
       </div>
@@ -244,14 +257,14 @@
           <span class="item">Майки</span>
           <span class="item">Шорты</span>
         </div>
-        <div class="triple_dot">
+        <div class="triple_dot ft">
           <b>.</b>
           <b>.</b>
           <b>.</b>
         </div>
         <div class="arrow_up">
         </div>
-        <div>
+        <div class="phone-number ft">
           <b>8(908)45-32-7798</b>
         </div>
         <div class="book_call foot">
