@@ -18,7 +18,8 @@
 }
 
 body{
-  width: 100%;
+  width: 150%;
+  right: 10px;
   overflow-x: hidden;
 }
 #header {
@@ -184,15 +185,15 @@ button:hover{
 .snickers_bg {
   width: 615px;
   height: 369px;
-  margin-left: 792px;
+  margin-left:760px;
   margin-top: -405px;
   display: flex;
   gap: 10px;
   background:linear-gradient(to right,rgba(49,69,255,0.5) 60%),url('bg-image.jpg');
   background-size: cover;
   justify-content:flex-end;
-  position: absolute;
   padding: 36px;
+  position: absolute;
   color: var(--footer-banner-font-color);
 }
 .first_scr_image{
@@ -394,10 +395,20 @@ button:hover{
     height:19px;
     background-color: var(--background_color);
     margin-left: 60px;
-    margin-top: 295px;
+    margin-top: 255px;
   }
-
 }
+  .banner-text-b{
+    h3{
+    width: 250px;
+    font-weight: 900;
+    font-size: var(--h3-size);
+    }
+  }
+  .banner-text-small{
+    font-weight: 400;
+    font-size: var(--paragraph-size);
+  }
 .plus{
   font-weight: 900;
   font-size: 36px;
