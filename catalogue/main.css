@@ -570,11 +570,8 @@ sup {
       translate: 110vw;
     }
   }
-  @keyframes move-to-right{
-    100%{
-      translate: 110vw;
-    }
-  }
+  
+  
   nav{
     display: none;
     position: fixed;
